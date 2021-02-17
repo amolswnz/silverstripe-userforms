@@ -126,11 +126,14 @@ class EditableLiteralField extends EditableFormField
                 'HideFromReports',
                 _t(__CLASS__.'.HIDEFROMREPORT', 'Hide from reports?')
             ),
+        ]);
+
+        $fields->insertAfter('Title',
             CheckboxField::create(
                 'HideLabel',
-                _t(__CLASS__.'.HIDELABEL', "Hide 'Title' label on frontend?")
+                _t(__CLASS__ . '.HIDELABEL', "Hide 'Title' label on frontend?")
             )
-        ]);
+        );
 
         return $fields;
     }
